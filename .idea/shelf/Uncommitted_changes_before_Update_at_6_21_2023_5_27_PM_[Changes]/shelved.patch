@@ -1,0 +1,44 @@
+Index: Presentation/src/main/resources/bootstrap.yml
+===================================================================
+diff --git a/Presentation/src/main/resources/bootstrap.yml b/configuration/src/main/resources/application.yml
+rename from Presentation/src/main/resources/bootstrap.yml
+rename to configuration/src/main/resources/application.yml
+--- a/Presentation/src/main/resources/bootstrap.yml	
++++ b/configuration/src/main/resources/application.yml	
+@@ -1,0 +1,18 @@
++spring:
++  application:
++    name: Config
++#  config:
++#    import: optional:configserver:http://localhost:8888
++
++
++
++
++logging:
++  level:
++    root: ERROR
++
++
++eureka:
++  client:
++    serviceUrl:
++      defaultZone: http://localhost:8761/eureka/
+\ No newline at end of file
+Index: Presentation/src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\nserver.port = 8090\r\n\r\nspring.application.name = PresentationService\r\n\r\nkafka.topic1 = px\r\nkafka.topic2 = qty\r\n\r\n# Kafka Consumer Configuration\r\nspring.kafka.consumer.bootstrap-servers=localhost:9092\r\nspring.kafka.consumer.group-id=my-group\r\nspring.kafka.consumer.key-deserializer=org.apache.kafka.common.serialization.StringDeserializer\r\nspring.kafka.consumer.value-deserializer=org.apache.kafka.common.serialization.StringDeserializer\r\n
+===================================================================
+diff --git a/Presentation/src/main/resources/application.properties b/Presentation/src/main/resources/application.properties
+--- a/Presentation/src/main/resources/application.properties	
++++ b/Presentation/src/main/resources/application.properties	
+@@ -1,8 +1,3 @@
+-
+-server.port = 8090
+-
+-spring.application.name = PresentationService
+-
+ kafka.topic1 = px
+ kafka.topic2 = qty
+ 

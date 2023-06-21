@@ -1,0 +1,622 @@
+Index: JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n\txsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n\t<modelVersion>4.0.0</modelVersion>\r\n\t<parent>\r\n\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t<artifactId>spring-boot-starter-parent</artifactId>\r\n\t\t<version>3.1.0</version>\r\n\t\t<relativePath/> <!-- lookup parent from repository -->\r\n\t</parent>\r\n\t<groupId>com.example</groupId>\r\n\t<artifactId>JDRSlistin</artifactId>\r\n\t<version>0.0.1-SNAPSHOT</version>\r\n\t<name>JDRSlistin</name>\r\n\t<description>Demo project for Spring Boot</description>\r\n\t<properties>\r\n\t\t<java.version>17</java.version>\r\n\t\t<spring-cloud.version>2022.0.3</spring-cloud.version>\r\n\t</properties>\r\n\t<dependencies>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t<artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>\r\n\t\t</dependency>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.kafka</groupId>\r\n\t\t\t<artifactId>spring-kafka</artifactId>\r\n\t\t</dependency>\r\n\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t<artifactId>spring-boot-starter-test</artifactId>\r\n\t\t\t<scope>test</scope>\r\n\t\t</dependency>\r\n\t\t<dependency>\r\n\t\t\t<groupId>io.projectreactor</groupId>\r\n\t\t\t<artifactId>reactor-test</artifactId>\r\n\t\t\t<scope>test</scope>\r\n\t\t</dependency>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.json</groupId>\r\n\t\t\t<artifactId>json</artifactId>\r\n\t\t\t<version>20210307</version>\r\n\t\t</dependency>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.kafka</groupId>\r\n\t\t\t<artifactId>spring-kafka-test</artifactId>\r\n\t\t\t<scope>test</scope>\r\n\t\t</dependency>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.kafka</groupId>\r\n\t\t\t<artifactId>spring-kafka-test</artifactId>\r\n\t\t\t<scope>test</scope>\r\n\t\t</dependency>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.cloud</groupId>\r\n\t\t\t<artifactId>spring-cloud-starter-config</artifactId>\r\n\t\t</dependency>\r\n\r\n\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.kafka</groupId>\r\n\t\t\t<artifactId>spring-kafka</artifactId>\r\n\t\t</dependency>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.cloud</groupId>\r\n\t\t\t<artifactId>spring-cloud-commons</artifactId>\r\n\t\t\t<version>4.0.3</version>\r\n\t\t\t<scope>compile</scope>\r\n\t\t</dependency>\r\n\t</dependencies>\r\n\t<dependencyManagement>\r\n\t\t<dependencies>\r\n\t\t\t<dependency>\r\n\t\t\t\t<groupId>org.springframework.cloud</groupId>\r\n\t\t\t\t<artifactId>spring-cloud-dependencies</artifactId>\r\n\t\t\t\t<version>${spring-cloud.version}</version>\r\n\t\t\t\t<type>pom</type>\r\n\t\t\t\t<scope>import</scope>\r\n\t\t\t</dependency>\r\n\t\t</dependencies>\r\n\t</dependencyManagement>\r\n\t<build>\r\n\t\t<plugins>\r\n\t\t\t<plugin>\r\n\t\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t\t<artifactId>spring-boot-maven-plugin</artifactId>\r\n\t\t\t</plugin>\r\n\t\t</plugins>\r\n\t</build>\r\n\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/pom.xml b/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/pom.xml
+--- a/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/pom.xml	
++++ b/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/pom.xml	
+@@ -20,8 +20,24 @@
+ 	<dependencies>
+ 		<dependency>
+ 			<groupId>org.springframework.boot</groupId>
++			<artifactId>spring-boot-starter-web</artifactId>
++
++		</dependency>
++		<dependency>
++			<groupId>org.springframework.boot</groupId>
++			<artifactId>spring-boot-starter</artifactId>
++
++		</dependency>
++		<dependency>
++			<groupId>org.springframework.boot</groupId>
+ 			<artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
+ 		</dependency>
++		<dependency>
++			<groupId>org.springframework.cloud</groupId>
++			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
++			<version>2.2.9.RELEASE</version>
++		</dependency>
++
+ 		<dependency>
+ 			<groupId>org.springframework.kafka</groupId>
+ 			<artifactId>spring-kafka</artifactId>
+Index: JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/src/main/java/com/example/JDRSlistin/JdrSlistinApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.JDRSlistin;\r\n\r\nimport org.springframework.boot.SpringApplication;\r\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\r\nimport org.springframework.cloud.client.discovery.EnableDiscoveryClient;\r\n\r\n@SpringBootApplication\r\n@EnableDiscoveryClient\r\npublic class JdrSlistinApplication {\r\n\r\n\tpublic static void main(String[] args) {\r\n\t\tSpringApplication.run(JdrSlistinApplication.class, args);\r\n\t}\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/src/main/java/com/example/JDRSlistin/JdrSlistinApplication.java b/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/src/main/java/com/example/JDRSlistin/JdrSlistinApplication.java
+--- a/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/src/main/java/com/example/JDRSlistin/JdrSlistinApplication.java	
++++ b/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/src/main/java/com/example/JDRSlistin/JdrSlistinApplication.java	
+@@ -5,7 +5,7 @@
+ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+ 
+ @SpringBootApplication
+-@EnableDiscoveryClient
++
+ public class JdrSlistinApplication {
+ 
+ 	public static void main(String[] args) {
+Index: configuration/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n\txsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n\t<modelVersion>4.0.0</modelVersion>\r\n\t<parent>\r\n\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t<artifactId>spring-boot-starter-parent</artifactId>\r\n\t\t<version>3.1.0</version>\r\n\t\t<relativePath/> <!-- lookup parent from repository -->\r\n\t</parent>\r\n\t<groupId>com.configuration</groupId>\r\n\t<artifactId>configuration</artifactId>\r\n\t<version>0.0.1-SNAPSHOT</version>\r\n\t<name>configuration</name>\r\n\t<description>Demo project for Spring Boot</description>\r\n\t<properties>\r\n\t\t<java.version>17</java.version>\r\n\t\t<spring-cloud.version>2022.0.3</spring-cloud.version>\r\n\t</properties>\r\n\t<dependencies>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.cloud</groupId>\r\n\t\t\t<artifactId>spring-cloud-config-server</artifactId>\r\n\t\t</dependency>\r\n\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t<artifactId>spring-boot-starter-test</artifactId>\r\n\t\t\t<scope>test</scope>\r\n\t\t</dependency>\r\n\t</dependencies>\r\n\t<dependencyManagement>\r\n\t\t<dependencies>\r\n\t\t\t<dependency>\r\n\t\t\t\t<groupId>org.springframework.cloud</groupId>\r\n\t\t\t\t<artifactId>spring-cloud-dependencies</artifactId>\r\n\t\t\t\t<version>${spring-cloud.version}</version>\r\n\t\t\t\t<type>pom</type>\r\n\t\t\t\t<scope>import</scope>\r\n\t\t\t</dependency>\r\n\t\t</dependencies>\r\n\t</dependencyManagement>\r\n\r\n\t<build>\r\n\t\t<plugins>\r\n\t\t\t<plugin>\r\n\t\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t\t<artifactId>spring-boot-maven-plugin</artifactId>\r\n\t\t\t</plugin>\r\n\t\t</plugins>\r\n\t</build>\r\n\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/configuration/pom.xml b/configuration/pom.xml
+--- a/configuration/pom.xml	
++++ b/configuration/pom.xml	
+@@ -22,7 +22,10 @@
+ 			<groupId>org.springframework.cloud</groupId>
+ 			<artifactId>spring-cloud-config-server</artifactId>
+ 		</dependency>
+-
++		<dependency>
++			<groupId>org.springframework.cloud</groupId>
++			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
++		</dependency>
+ 		<dependency>
+ 			<groupId>org.springframework.boot</groupId>
+ 			<artifactId>spring-boot-starter-test</artifactId>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"959afcb3-f17d-4826-bfc9-7d6cfcc487e7\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/compiler.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/compiler.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/encodings.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/encodings.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/pom.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/src/main/java/com/example/JDRSlistin/JDRS.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/src/main/java/com/example/JDRSlistin/JDRS.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/src/main/java/com/example/JDRSlistin/JdrSlistinApplication.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/src/main/java/com/example/JDRSlistin/JdrSlistinApplication.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/src/main/resources/application.properties\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/src/main/resources/application.yml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/src/main/resources/application.yml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Presentation/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Presentation/pom.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Presentation/src/main/resources/application.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Presentation/src/main/resources/application.properties\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Presentation/src/main/resources/application.yml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Presentation/src/main/resources/application.yml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Presentation/target/classes/application.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Presentation/target/classes/application.properties\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Presentation/target/classes/application.yml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Presentation/target/classes/application.yml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/RTDS/src/main/resources/application.yml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/RTDS/src/main/resources/application.yml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/configuration/src/main/resources/config/JDRS.yml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/configuration/src/main/resources/config/JDRS.yml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2RWlu8eSDxl7m9DP9DoOma5YiLs\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/kalki/Documents/SA_Final_Project&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\" selected=\"Application.JdrSlistinApplication\">\r\n    <configuration name=\"ConfigurationApplication\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.configuration.configuration.ConfigurationApplication\" />\r\n      <module name=\"configuration\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.configuration.configuration.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"EurekaServerApplication\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.SA_Project.Eureka.Server.EurekaServerApplication\" />\r\n      <module name=\"Eureka-Server\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.SA_Project.Eureka.Server.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"JdrSlistinApplication\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.example.JDRSlistin.JdrSlistinApplication\" />\r\n      <module name=\"JDRSlistin\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.example.JDRSlistin.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"RtdsApplication\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.rtds.RTDS.RtdsApplication\" />\r\n      <module name=\"RTDS\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.rtds.RTDS.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.JdrSlistinApplication\" />\r\n        <item itemvalue=\"Application.RtdsApplication\" />\r\n        <item itemvalue=\"Application.ConfigurationApplication\" />\r\n        <item itemvalue=\"Application.EurekaServerApplication\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"959afcb3-f17d-4826-bfc9-7d6cfcc487e7\" name=\"Changes\" comment=\"\" />\r\n      <created>1687373937320</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1687373937320</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/Eureka-Server/src/main/java/com/SA_Project/Eureka/Server/EurekaServerApplication.java</url>\r\n          <line>8</line>\r\n          <option name=\"timeStamp\" value=\"2\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -5,22 +5,20 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="959afcb3-f17d-4826-bfc9-7d6cfcc487e7" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/pom.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/src/main/java/com/example/JDRSlistin/JDRS.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/src/main/java/com/example/JDRSlistin/JDRS.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/src/main/java/com/example/JDRSlistin/JdrSlistinApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/src/main/java/com/example/JDRSlistin/JdrSlistinApplication.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/src/main/resources/application.properties" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/JDRSlistin (1)/JDRSlistin (1)/JDRSlistin/src/main/resources/application.yml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Presentation/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation/pom.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Presentation/px.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation/px.csv" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Presentation/qty.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation/qty.csv" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Presentation/src/main/java/com/example/PresentationService/PresentationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation/src/main/java/com/example/PresentationService/PresentationServiceApplication.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Presentation/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation/src/main/resources/application.properties" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Presentation/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation/src/main/resources/application.yml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Presentation/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configuration/src/main/resources/application.yml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Presentation/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation/target/classes/application.properties" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Presentation/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation/target/classes/application.yml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/RTDS/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RTDS/src/main/resources/application.yml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/configuration/src/main/resources/config/JDRS.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configuration/src/main/resources/config/JDRS.yml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Presentation/target/classes/bootstrap.yml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Presentation/target/classes/com/example/PresentationService/PresentationServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation/target/classes/com/example/PresentationService/PresentationServiceApplication.class" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -52,7 +50,7 @@
+     &quot;last_opened_file_path&quot;: &quot;C:/Users/kalki/Documents/SA_Final_Project&quot;
+   }
+ }</component>
+-  <component name="RunManager" selected="Application.JdrSlistinApplication">
++  <component name="RunManager" selected="Application.ConfigurationApplication">
+     <configuration name="ConfigurationApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="com.configuration.configuration.ConfigurationApplication" />
+       <module name="configuration" />
+@@ -107,9 +105,9 @@
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Application.ConfigurationApplication" />
+         <item itemvalue="Application.JdrSlistinApplication" />
+         <item itemvalue="Application.RtdsApplication" />
+-        <item itemvalue="Application.ConfigurationApplication" />
+         <item itemvalue="Application.EurekaServerApplication" />
+       </list>
+     </recent_temporary>
+Index: Presentation/target/classes/application.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>eureka:\r\n  client:\r\n    serviceUrl:\r\n      defaultZone: http://localhost:8761/eureka/
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Presentation/target/classes/application.yml b/Presentation/target/classes/application.yml
+--- a/Presentation/target/classes/application.yml	
++++ b/Presentation/target/classes/application.yml	
+@@ -1,3 +1,18 @@
++spring:
++  application:
++   name: PresentationService
++#  config:
++#    import: optional:configserver:http://localhost:8888
++
++
++server:
++  port: 8083
++
++logging:
++  level:
++    root: ERROR
++
++
+ eureka:
+   client:
+     serviceUrl:
+Index: Presentation/src/main/java/com/example/PresentationService/PresentationServiceApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.PresentationService;\r\n\r\nimport org.springframework.boot.SpringApplication;\r\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\r\nimport org.springframework.cloud.client.discovery.EnableDiscoveryClient;\r\n\r\n\r\n@SpringBootApplication\r\n@EnableDiscoveryClient\r\n\r\npublic class PresentationServiceApplication {\r\n\r\n\tpublic static void main(String[] args) {\r\n\t\tSpringApplication.run(PresentationServiceApplication.class, args);\r\n\t}\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Presentation/src/main/java/com/example/PresentationService/PresentationServiceApplication.java b/Presentation/src/main/java/com/example/PresentationService/PresentationServiceApplication.java
+--- a/Presentation/src/main/java/com/example/PresentationService/PresentationServiceApplication.java	
++++ b/Presentation/src/main/java/com/example/PresentationService/PresentationServiceApplication.java	
+@@ -6,7 +6,7 @@
+ 
+ 
+ @SpringBootApplication
+-@EnableDiscoveryClient
++
+ 
+ public class PresentationServiceApplication {
+ 
+Index: Presentation/target/classes/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\nserver.port = 8090\r\n\r\nspring.application.name = PresentationService\r\n\r\nkafka.topic1 = px\r\nkafka.topic2 = qty\r\n\r\n# Kafka Consumer Configuration\r\nspring.kafka.consumer.bootstrap-servers=localhost:9092\r\nspring.kafka.consumer.group-id=my-group\r\nspring.kafka.consumer.key-deserializer=org.apache.kafka.common.serialization.StringDeserializer\r\nspring.kafka.consumer.value-deserializer=org.apache.kafka.common.serialization.StringDeserializer\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/Presentation/target/classes/application.properties b/Presentation/target/classes/application.properties
+--- a/Presentation/target/classes/application.properties	
++++ b/Presentation/target/classes/application.properties	
+@@ -1,8 +1,3 @@
+-
+-server.port = 8090
+-
+-spring.application.name = PresentationService
+-
+ kafka.topic1 = px
+ kafka.topic2 = qty
+ 
+Index: Presentation/qty.csv
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>2023-06-21T21:06:19.278674100Z,0.03372975\r\n2023-06-21T21:06:29.302457800Z,0.0337231\r\n2023-06-21T21:06:39.331634300Z,0.03373667\r\n2023-06-21T21:06:49.188369600Z,0.03373667\r\n2023-06-21T21:06:59.323134700Z,0.03373417\r\n2023-06-21T21:07:09.251672800Z,0.03375005\r\n2023-06-21T21:07:19.280982300Z,0.03374096\r\n2023-06-21T21:07:29.273663800Z,0.03374279\r\n2023-06-21T21:07:39.345357200Z,0.03373772\r\n2023-06-21T21:07:49.233393600Z,0.0337256\r\n2023-06-21T21:07:59.318231800Z,0.03372563\r\n2023-06-21T21:08:09.249846500Z,0.03370056\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Presentation/qty.csv b/Presentation/qty.csv
+--- a/Presentation/qty.csv	
++++ b/Presentation/qty.csv	
+@@ -1,12 +1,133 @@
+-2023-06-21T21:06:19.278674100Z,0.03372975
+-2023-06-21T21:06:29.302457800Z,0.0337231
+-2023-06-21T21:06:39.331634300Z,0.03373667
+-2023-06-21T21:06:49.188369600Z,0.03373667
+-2023-06-21T21:06:59.323134700Z,0.03373417
+-2023-06-21T21:07:09.251672800Z,0.03375005
+-2023-06-21T21:07:19.280982300Z,0.03374096
+-2023-06-21T21:07:29.273663800Z,0.03374279
+-2023-06-21T21:07:39.345357200Z,0.03373772
+-2023-06-21T21:07:49.233393600Z,0.0337256
+-2023-06-21T21:07:59.318231800Z,0.03372563
+-2023-06-21T21:08:09.249846500Z,0.03370056
++2023-06-21T22:11:46.815021Z,0.03378572
++2023-06-21T22:11:46.815021Z,0.03378572
++2023-06-21T22:11:46.815021Z,0.03377252
++2023-06-21T22:11:46.815021Z,0.03377471
++2023-06-21T22:11:46.815021Z,0.03377471
++2023-06-21T22:11:46.815021Z,0.03377471
++2023-06-21T22:11:46.815021Z,0.03377251
++2023-06-21T22:11:46.815021Z,0.03377251
++2023-06-21T22:11:46.815021Z,0.03377251
++2023-06-21T22:11:46.816033700Z,0.03377251
++2023-06-21T22:11:46.816033700Z,0.03377251
++2023-06-21T22:11:46.816033700Z,0.0337749
++2023-06-21T22:11:46.816033700Z,0.0337749
++2023-06-21T22:11:46.816033700Z,0.0337749
++2023-06-21T22:11:46.816033700Z,0.0337749
++2023-06-21T22:11:46.816033700Z,0.0337749
++2023-06-21T22:11:46.816033700Z,0.03378026
++2023-06-21T22:11:46.816033700Z,0.03378026
++2023-06-21T22:11:46.816033700Z,0.03378247
++2023-06-21T22:11:46.816033700Z,0.03378247
++2023-06-21T22:11:46.816033700Z,0.03378247
++2023-06-21T22:11:46.816033700Z,0.03378485
++2023-06-21T22:11:46.817030200Z,0.03378485
++2023-06-21T22:11:46.817030200Z,0.03381388
++2023-06-21T22:11:46.817030200Z,0.03382388
++2023-06-21T22:11:46.817030200Z,0.84543364
++2023-06-21T22:11:46.817030200Z,0.03381045
++2023-06-21T22:11:46.817030200Z,0.03381619
++2023-06-21T22:11:46.817030200Z,0.03380306
++2023-06-21T22:11:46.817030200Z,0.0338058
++2023-06-21T22:11:46.817030200Z,0.0338058
++2023-06-21T22:11:46.817030200Z,0.0338058
++2023-06-21T22:11:46.817030200Z,0.0338058
++2023-06-21T22:11:46.817030200Z,0.03381463
++2023-06-21T22:11:46.817030200Z,0.03382217
++2023-06-21T22:11:46.817030200Z,0.03382217
++2023-06-21T22:11:46.817030200Z,0.03382217
++2023-06-21T22:11:46.818017Z,0.03382004
++2023-06-21T22:11:46.818017Z,0.03382004
++2023-06-21T22:11:46.818017Z,0.03381613
++2023-06-21T22:11:46.818017Z,0.03381892
++2023-06-21T22:11:46.818017Z,0.03381892
++2023-06-21T22:11:46.818017Z,0.03381892
++2023-06-21T22:11:46.818017Z,0.03381423
++2023-06-21T22:11:46.818017Z,0.03381423
++2023-06-21T22:11:46.818017Z,0.03381423
++2023-06-21T22:11:46.818017Z,0.03381423
++2023-06-21T22:11:46.818017Z,0.03381423
++2023-06-21T22:11:46.818017Z,0.03381423
++2023-06-21T22:11:49.240242900Z,0.03380967
++2023-06-21T22:11:59.236072500Z,0.03380073
++2023-06-21T22:12:09.205261200Z,0.03380073
++2023-06-21T22:12:19.185850700Z,0.03378652
++2023-06-21T22:12:29.211191200Z,0.03378168
++2023-06-21T22:12:39.180549200Z,0.03378166
++2023-06-21T22:12:49.204426900Z,0.03377715
++2023-06-21T22:12:59.185119600Z,0.03377715
++2023-06-21T22:13:09.197141500Z,0.03377715
++2023-06-21T22:13:19.183036400Z,0.03378271
++2023-06-21T22:13:29.207191700Z,0.03379293
++2023-06-21T22:13:39.201029300Z,0.03379293
++2023-06-21T22:13:49.187987Z,0.03379293
++2023-06-21T22:13:59.193977900Z,0.03379293
++2023-06-21T22:14:09.195010100Z,0.03379293
++2023-06-21T22:14:19.206626300Z,0.03379031
++2023-06-21T22:14:29.200428500Z,0.03379025
++2023-06-21T22:14:39.173305400Z,0.03379025
++2023-06-21T22:14:49.196835300Z,0.03379025
++2023-06-21T22:14:59.193426500Z,0.03379025
++2023-06-21T22:15:09.239826900Z,0.03379025
++2023-06-21T22:15:19.231287400Z,0.03379025
++2023-06-21T22:15:29.211392900Z,0.03380607
++2023-06-21T22:15:39.193458Z,0.03381101
++2023-06-21T22:15:49.176507700Z,0.03381101
++2023-06-21T22:15:59.575552400Z,0.03380427
++2023-06-21T22:16:09.240405800Z,0.03378979
++2023-06-21T22:16:19.214623600Z,0.03378506
++2023-06-21T22:16:29.198171700Z,0.03378506
++2023-06-21T22:16:39.214706300Z,0.03378506
++2023-06-21T22:16:49.176687200Z,0.03378506
++2023-06-21T22:16:59.199834400Z,0.03377809
++2023-06-21T22:17:09.174809600Z,0.03377809
++2023-06-21T22:17:19.499637100Z,0.0337728
++2023-06-21T22:17:29.208846600Z,0.0337728
++2023-06-21T22:17:39.215939Z,0.0337728
++2023-06-21T22:17:49.233073700Z,0.0337728
++2023-06-21T22:17:59.203410600Z,0.0337728
++2023-06-21T22:18:09.579456900Z,0.03376129
++2023-06-21T22:18:19.192293200Z,0.03375617
++2023-06-21T22:18:29.171172800Z,0.03374452
++2023-06-21T22:18:39.194884700Z,0.03373648
++2023-06-21T22:18:49.188284300Z,0.03373448
++2023-06-21T22:18:59.219503700Z,0.03373448
++2023-06-21T22:19:09.200025300Z,0.03374913
++2023-06-21T22:19:19.201724400Z,0.03374373
++2023-06-21T22:19:29.555403900Z,0.03374373
++2023-06-21T22:19:39.194327500Z,0.03374373
++2023-06-21T22:19:49.190622300Z,0.03373606
++2023-06-21T22:19:59.528208200Z,0.03373871
++2023-06-21T22:20:09.297878900Z,0.03373871
++2023-06-21T22:20:19.204674300Z,0.03373871
++2023-06-21T22:20:29.237335400Z,0.03373708
++2023-06-21T22:20:39.177974900Z,0.03373483
++2023-06-21T22:20:49.199880300Z,0.03373483
++2023-06-21T22:20:59.183804Z,0.03374967
++2023-06-21T22:21:09.225683100Z,0.03375213
++2023-06-21T22:21:19.181001900Z,0.03375896
++2023-06-21T22:21:29.202845500Z,0.03375896
++2023-06-21T22:21:39.199986800Z,0.03375896
++2023-06-21T22:21:49.204174600Z,0.03376017
++2023-06-21T22:21:59.217218200Z,0.03376279
++2023-06-21T22:22:09.193961Z,0.03376067
++2023-06-21T22:22:19.195492900Z,0.03376067
++2023-06-21T22:22:29.200544Z,0.03376067
++2023-06-21T22:22:39.250159700Z,0.0337579
++2023-06-21T22:22:49.199684600Z,0.0337579
++2023-06-21T22:22:59.212911100Z,0.0337579
++2023-06-21T22:23:09.200203Z,0.0337579
++2023-06-21T22:23:19.549099200Z,0.0337579
++2023-06-21T22:23:29.206546200Z,0.0337579
++2023-06-21T22:23:39.205794600Z,0.0337579
++2023-06-21T22:23:49.170750300Z,0.0337579
++2023-06-21T22:23:59.170212900Z,0.0337579
++2023-06-21T22:24:09.215626600Z,0.0337568
++2023-06-21T22:24:19.179385700Z,0.0337568
++2023-06-21T22:24:29.217817300Z,0.0337568
++2023-06-21T22:24:39.176959100Z,0.0337568
++2023-06-21T22:24:49.199391700Z,0.0337568
++2023-06-21T22:24:59.331062400Z,0.03375228
++2023-06-21T22:25:09.191010900Z,0.03375228
++2023-06-21T22:25:19.188517800Z,0.03375228
++2023-06-21T22:25:29.192871100Z,0.03375228
++2023-06-21T22:25:39.192224Z,0.03375228
+Index: Presentation/px.csv
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>2023-06-21T21:06:19.278674100Z,29943.89\r\n2023-06-21T21:06:29.302457800Z,29949.8\r\n2023-06-21T21:06:39.331634300Z,29937.75\r\n2023-06-21T21:06:49.188369600Z,29937.75\r\n2023-06-21T21:06:59.318860400Z,29939.97\r\n2023-06-21T21:07:09.251672800Z,29925.88\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Presentation/px.csv b/Presentation/px.csv
+--- a/Presentation/px.csv	
++++ b/Presentation/px.csv	
+@@ -1,6 +1,133 @@
+-2023-06-21T21:06:19.278674100Z,29943.89
+-2023-06-21T21:06:29.302457800Z,29949.8
+-2023-06-21T21:06:39.331634300Z,29937.75
+-2023-06-21T21:06:49.188369600Z,29937.75
+-2023-06-21T21:06:59.318860400Z,29939.97
+-2023-06-21T21:07:09.251672800Z,29925.88
++2023-06-21T22:11:46.818017Z,29894.29
++2023-06-21T22:11:46.818017Z,29894.29
++2023-06-21T22:11:46.819016700Z,29905.97
++2023-06-21T22:11:46.819016700Z,29904.03
++2023-06-21T22:11:46.819016700Z,29904.03
++2023-06-21T22:11:46.819016700Z,29904.03
++2023-06-21T22:11:46.819016700Z,29905.98
++2023-06-21T22:11:46.819016700Z,29905.98
++2023-06-21T22:11:46.819016700Z,29905.98
++2023-06-21T22:11:46.819016700Z,29905.98
++2023-06-21T22:11:46.819016700Z,29905.98
++2023-06-21T22:11:46.819016700Z,29903.86
++2023-06-21T22:11:46.819016700Z,29903.86
++2023-06-21T22:11:46.819016700Z,29903.86
++2023-06-21T22:11:46.819016700Z,29903.86
++2023-06-21T22:11:46.819016700Z,29903.86
++2023-06-21T22:11:46.819016700Z,29899.12
++2023-06-21T22:11:46.819016700Z,29899.12
++2023-06-21T22:11:46.820021100Z,29897.16
++2023-06-21T22:11:46.820021100Z,29897.16
++2023-06-21T22:11:46.820021100Z,29897.16
++2023-06-21T22:11:46.820021100Z,29895.06
++2023-06-21T22:11:46.820021100Z,29895.06
++2023-06-21T22:11:46.820021100Z,29869.39
++2023-06-21T22:11:46.820021100Z,29860.56
++2023-06-21T22:11:46.820021100Z,29866.33
++2023-06-21T22:11:46.820021100Z,29872.42
++2023-06-21T22:11:46.820021100Z,29867.35
++2023-06-21T22:11:46.820021100Z,29878.95
++2023-06-21T22:11:46.820021100Z,29876.53
++2023-06-21T22:11:46.820021100Z,29876.53
++2023-06-21T22:11:46.820021100Z,29876.53
++2023-06-21T22:11:46.820021100Z,29876.53
++2023-06-21T22:11:46.820021100Z,29868.73
++2023-06-21T22:11:46.820021100Z,29862.07
++2023-06-21T22:11:46.820021100Z,29862.07
++2023-06-21T22:11:46.820021100Z,29862.07
++2023-06-21T22:11:46.820021100Z,29863.95
++2023-06-21T22:11:46.821029200Z,29863.95
++2023-06-21T22:11:46.821029200Z,29867.4
++2023-06-21T22:11:46.821029200Z,29864.94
++2023-06-21T22:11:46.821029200Z,29864.94
++2023-06-21T22:11:46.821029200Z,29864.94
++2023-06-21T22:11:46.821029200Z,29869.08
++2023-06-21T22:11:46.821029200Z,29869.08
++2023-06-21T22:11:46.821029200Z,29869.08
++2023-06-21T22:11:46.821029200Z,29869.08
++2023-06-21T22:11:46.821029200Z,29869.08
++2023-06-21T22:11:46.821029200Z,29869.08
++2023-06-21T22:11:49.241206900Z,29873.11
++2023-06-21T22:11:59.236072500Z,29881.01
++2023-06-21T22:12:09.206266Z,29881.01
++2023-06-21T22:12:19.185850700Z,29893.58
++2023-06-21T22:12:29.211191200Z,29897.86
++2023-06-21T22:12:39.180549200Z,29897.88
++2023-06-21T22:12:49.205415800Z,29901.87
++2023-06-21T22:12:59.185119600Z,29901.87
++2023-06-21T22:13:09.197141500Z,29901.87
++2023-06-21T22:13:19.183036400Z,29896.95
++2023-06-21T22:13:29.207191700Z,29887.91
++2023-06-21T22:13:39.201029300Z,29887.91
++2023-06-21T22:13:49.187987Z,29887.91
++2023-06-21T22:13:59.194977500Z,29887.91
++2023-06-21T22:14:09.196011400Z,29887.91
++2023-06-21T22:14:19.206626300Z,29890.23
++2023-06-21T22:14:29.201527400Z,29890.28
++2023-06-21T22:14:39.174305500Z,29890.28
++2023-06-21T22:14:49.196835300Z,29890.28
++2023-06-21T22:14:59.194359Z,29890.28
++2023-06-21T22:15:09.239826900Z,29890.28
++2023-06-21T22:15:19.232315800Z,29890.28
++2023-06-21T22:15:29.212393Z,29876.29
++2023-06-21T22:15:39.193458Z,29871.93
++2023-06-21T22:15:49.177516800Z,29871.93
++2023-06-21T22:15:59.575552400Z,29877.88
++2023-06-21T22:16:09.240405800Z,29890.69
++2023-06-21T22:16:19.214623600Z,29894.87
++2023-06-21T22:16:29.198171700Z,29894.87
++2023-06-21T22:16:39.214706300Z,29894.87
++2023-06-21T22:16:49.176687200Z,29894.87
++2023-06-21T22:16:59.200834600Z,29901.04
++2023-06-21T22:17:09.172827900Z,29901.04
++2023-06-21T22:17:19.499637100Z,29905.72
++2023-06-21T22:17:29.208846600Z,29905.72
++2023-06-21T22:17:39.215939Z,29905.72
++2023-06-21T22:17:49.233073700Z,29905.72
++2023-06-21T22:17:59.203410600Z,29905.72
++2023-06-21T22:18:09.579456900Z,29915.92
++2023-06-21T22:18:19.192293200Z,29920.46
++2023-06-21T22:18:29.171172800Z,29930.79
++2023-06-21T22:18:39.194884700Z,29937.92
++2023-06-21T22:18:49.189320800Z,29939.69
++2023-06-21T22:18:59.219503700Z,29939.69
++2023-06-21T22:19:09.200025300Z,29926.7
++2023-06-21T22:19:19.200641700Z,29931.49
++2023-06-21T22:19:29.555989Z,29931.49
++2023-06-21T22:19:39.194327500Z,29931.49
++2023-06-21T22:19:49.191635400Z,29938.29
++2023-06-21T22:19:59.529100400Z,29935.94
++2023-06-21T22:20:09.296294600Z,29935.94
++2023-06-21T22:20:19.204674300Z,29935.94
++2023-06-21T22:20:29.237335400Z,29937.39
++2023-06-21T22:20:39.177974900Z,29939.38
++2023-06-21T22:20:49.199880300Z,29939.38
++2023-06-21T22:20:59.184796100Z,29926.22
++2023-06-21T22:21:09.225683100Z,29924.04
++2023-06-21T22:21:19.178983700Z,29917.98
++2023-06-21T22:21:29.202845500Z,29917.98
++2023-06-21T22:21:39.199986800Z,29917.98
++2023-06-21T22:21:49.204174600Z,29916.91
++2023-06-21T22:21:59.217218200Z,29914.59
++2023-06-21T22:22:09.191990500Z,29916.47
++2023-06-21T22:22:19.192417500Z,29916.47
++2023-06-21T22:22:29.200544Z,29916.47
++2023-06-21T22:22:39.250159700Z,29918.92
++2023-06-21T22:22:49.200691400Z,29918.92
++2023-06-21T22:22:59.212911100Z,29918.92
++2023-06-21T22:23:09.196640800Z,29918.92
++2023-06-21T22:23:19.549099200Z,29918.92
++2023-06-21T22:23:29.206546200Z,29918.92
++2023-06-21T22:23:39.205794600Z,29918.92
++2023-06-21T22:23:49.170750300Z,29918.92
++2023-06-21T22:23:59.170212900Z,29918.92
++2023-06-21T22:24:09.215626600Z,29919.9
++2023-06-21T22:24:19.179385700Z,29919.9
++2023-06-21T22:24:29.217817300Z,29919.9
++2023-06-21T22:24:39.176959100Z,29919.9
++2023-06-21T22:24:49.199391700Z,29919.9
++2023-06-21T22:24:59.331062400Z,29923.9
++2023-06-21T22:25:09.191010900Z,29923.9
++2023-06-21T22:25:19.188517800Z,29923.9
++2023-06-21T22:25:29.192871100Z,29923.9
++2023-06-21T22:25:39.192224Z,29923.9
+Index: Presentation/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n\txsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n\t<modelVersion>4.0.0</modelVersion>\r\n\t<parent>\r\n\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t<artifactId>spring-boot-starter-parent</artifactId>\r\n\t\t<version>3.1.0</version>\r\n\t\t<relativePath/> <!-- lookup parent from repository -->\r\n\t</parent>\r\n\t<groupId>com.example</groupId>\r\n\t<artifactId>PresentationService</artifactId>\r\n\t<version>0.0.1-SNAPSHOT</version>\r\n\t<name>PresentationService</name>\r\n\t<description>Demo project for Spring Boot</description>\r\n\t<properties>\r\n\t\t<java.version>17</java.version>\r\n\t</properties>\r\n\t<dependencies>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t<artifactId>spring-boot-starter</artifactId>\r\n\t\t</dependency>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.cloud</groupId>\r\n\t\t\t<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>\r\n\t\t</dependency>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t<artifactId>spring-boot-starter-web</artifactId>\r\n\t\t</dependency>\r\n\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.kafka</groupId>\r\n\t\t\t<artifactId>spring-kafka</artifactId>\r\n\t\t</dependency>\r\n\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t<artifactId>spring-boot-starter-test</artifactId>\r\n\t\t\t<scope>test</scope>\r\n\t\t</dependency>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.kafka</groupId>\r\n\t\t\t<artifactId>spring-kafka-test</artifactId>\r\n\t\t\t<scope>test</scope>\r\n\t\t</dependency>\r\n\t\t<dependency>\r\n\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t<artifactId>spring-boot-starter-web</artifactId>\r\n\t\t</dependency>\r\n\r\n\t\t<dependency> <groupId>org.apache.commons</groupId>\r\n\t\t\t<artifactId>commons-csv</artifactId>\r\n\t\t\t<version>1.10.0</version>\r\n\t\t</dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.cloud</groupId>\r\n            <artifactId>spring-cloud-commons</artifactId>\r\n            <version>4.0.3</version>\r\n            <scope>compile</scope>\r\n        </dependency>\r\n\r\n    </dependencies>\r\n\r\n\t<build>\r\n\t\t<plugins>\r\n\t\t\t<plugin>\r\n\t\t\t\t<groupId>org.springframework.boot</groupId>\r\n\t\t\t\t<artifactId>spring-boot-maven-plugin</artifactId>\r\n\t\t\t</plugin>\r\n\t\t</plugins>\r\n\t</build>\r\n\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Presentation/pom.xml b/Presentation/pom.xml
+--- a/Presentation/pom.xml	
++++ b/Presentation/pom.xml	
+@@ -15,26 +15,35 @@
+ 	<description>Demo project for Spring Boot</description>
+ 	<properties>
+ 		<java.version>17</java.version>
++		<spring-cloud.version>2022.0.3</spring-cloud.version>
+ 	</properties>
+ 	<dependencies>
++
++
++		<dependency>
++			<groupId>org.springframework.boot</groupId>
++			<artifactId>spring-boot-starter-web</artifactId>
++
++		</dependency>
++
++
+ 		<dependency>
+ 			<groupId>org.springframework.boot</groupId>
+ 			<artifactId>spring-boot-starter</artifactId>
++
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>org.springframework.cloud</groupId>
+ 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
++			<version>2.2.9.RELEASE</version>
+ 		</dependency>
+-		<dependency>
+-			<groupId>org.springframework.boot</groupId>
+-			<artifactId>spring-boot-starter-web</artifactId>
+-		</dependency>
+-
+ 		<dependency>
+ 			<groupId>org.springframework.kafka</groupId>
+ 			<artifactId>spring-kafka</artifactId>
+ 		</dependency>
+ 
++
++
+ 		<dependency>
+ 			<groupId>org.springframework.boot</groupId>
+ 			<artifactId>spring-boot-starter-test</artifactId>
+@@ -45,10 +54,9 @@
+ 			<artifactId>spring-kafka-test</artifactId>
+ 			<scope>test</scope>
+ 		</dependency>
+-		<dependency>
+-			<groupId>org.springframework.boot</groupId>
+-			<artifactId>spring-boot-starter-web</artifactId>
+-		</dependency>
++
++
++
+ 
+ 		<dependency> <groupId>org.apache.commons</groupId>
+ 			<artifactId>commons-csv</artifactId>
+@@ -62,6 +70,17 @@
+         </dependency>
+ 
+     </dependencies>
++	<dependencyManagement>
++		<dependencies>
++			<dependency>
++				<groupId>org.springframework.cloud</groupId>
++				<artifactId>spring-cloud-dependencies</artifactId>
++				<version>${spring-cloud.version}</version>
++				<type>pom</type>
++				<scope>import</scope>
++			</dependency>
++		</dependencies>
++	</dependencyManagement>
+ 
+ 	<build>
+ 		<plugins>
+Index: Presentation/src/main/resources/application.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>eureka:\r\n  client:\r\n    serviceUrl:\r\n      defaultZone: http://localhost:8761/eureka/
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Presentation/src/main/resources/application.yml b/Presentation/src/main/resources/application.yml
+--- a/Presentation/src/main/resources/application.yml	
++++ b/Presentation/src/main/resources/application.yml	
+@@ -1,3 +1,18 @@
++spring:
++  application:
++   name: PresentationService
++  config:
++    import: optional:configserver:http://localhost:8888
++
++
++server:
++  port: 8083
++
++logging:
++  level:
++    root: ERROR
++
++
+ eureka:
+   client:
+     serviceUrl:
+diff --git a/Presentation/target/classes/bootstrap.yml b/Presentation/target/classes/bootstrap.yml
+deleted file mode 100644
