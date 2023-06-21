@@ -1,4 +1,4 @@
-topic_name: topic_one
+
 spring:
   kafka:
     bootstrap-servers: localhost:9092
@@ -14,5 +14,5 @@ spring:
 app:
   topic:
     RTDIS1: topic_one
-    qty: qty
-    px: px
+    qty: DS_qty
+    px: DS_px
