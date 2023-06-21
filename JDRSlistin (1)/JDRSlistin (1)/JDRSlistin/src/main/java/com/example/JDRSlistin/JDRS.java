@@ -5,6 +5,7 @@ import com.example.JDRSlistin.Sender.Sender;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.messaging.MessageHeaders;
 import org.springframework.messaging.handler.annotation.Headers;
@@ -18,9 +19,13 @@ public class JDRS {
 
      @Autowired
     Sender sender;
-    @KafkaListener(topics = "${app.topic.RTDIS1}")
+
+
+
+    @KafkaListener(topics = "topic_one")
     public void receive(@Payload String message, @Headers MessageHeaders headers) {
         int startIndex = message.indexOf("{");
+        System.out.println(message);
         message = message.substring(startIndex);
 
         JSONObject data = new JSONObject(message);
