@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="181b4a57-8e5d-454c-a5ca-fbdf77160b17" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="de0a3e38-02b4-4b7c-b507-29a1640a1ce3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +20,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2RWlpWsjs5DT6TOBtZBocBwGPzf" />
+  <component name="ProjectId" id="2RWwQdDIyIqwBSvkS4pvlBBi6Wx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -30,29 +28,39 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kalki/Documents/SA_Final_Project/Real-time-data-processor-with-SpringBoot&quot;
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kalki/Documents/SA_Final_Project/Real-time-data-processor-with-SpringBoot/Presentation&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="PresentationServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.PresentationService.PresentationServiceApplication" />
+      <module name="PresentationService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.PresentationService.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PresentationServiceApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="181b4a57-8e5d-454c-a5ca-fbdf77160b17" name="Changes" comment="" />
-      <created>1687373900587</created>
+      <changelist id="de0a3e38-02b4-4b7c-b507-29a1640a1ce3" name="Changes" comment="" />
+      <created>1687379130083</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1687373900587</updated>
+      <updated>1687379130083</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JDRSlistin (1)/JDRSlistin/src/main/java/com/example/JDRSlistin/JdrSlistinApplication.java</url>
-          <line>5</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
