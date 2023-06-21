@@ -28,8 +28,7 @@ public class RTDIS {
     public void startStreaming() {
         scheduler = Executors.newSingleThreadScheduledExecutor();
 
-        // Schedule the stream method to run every 5 seconds
-        scheduler.scheduleAtFixedRate(this::stream, 0, 10, TimeUnit.SECONDS);
+       scheduler.scheduleAtFixedRate(this::stream, 0, 10, TimeUnit.SECONDS);
     }
 
     public void stopStreaming() {
@@ -38,11 +37,11 @@ public class RTDIS {
 
     public void stream() {
         WebClient webClient = WebClient.create();
-        String Url = API_URL; // The URL to retrieve Bitcoin price
+
 
 
         webClient.get()
-                .uri(Url)
+                .uri(API_URL)
                 .retrieve()
                 .bodyToMono(String.class)
                 .subscribe(data -> {
@@ -51,9 +50,6 @@ public class RTDIS {
                     System.out.println("Event sent to Kafka: " + data);
                 });
     }
-    public void sendMessage(){
 
-        kafkaProducer.send(KAFKA_TOPIC,"Hello");
-    }
 
 }
