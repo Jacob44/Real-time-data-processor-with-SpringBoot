@@ -18,7 +18,7 @@ public class JDRS {
 
      @Autowired
     Sender sender;
-    @KafkaListener(topics = "${app.topic.RTDIS1}")
+    @KafkaListener(topics = "topic_one")
     public void receive(@Payload String message, @Headers MessageHeaders headers) {
         int startIndex = message.indexOf("{");
         message = message.substring(startIndex);
