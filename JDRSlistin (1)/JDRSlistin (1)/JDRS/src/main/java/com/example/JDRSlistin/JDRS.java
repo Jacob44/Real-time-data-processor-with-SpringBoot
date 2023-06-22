@@ -29,9 +29,9 @@ public class JDRS {
         if (bids.length() > 0) {
             JSONObject firstBid = bids.getJSONObject(0);
             double px = firstBid.getDouble("px");
-            sender.send("px", String.valueOf(px));
+            sender.send("${DS_px}", String.valueOf(px));
             double qty = firstBid.getDouble("qty");
-            sender.send("qty", String.valueOf(qty));
+            sender.send("${DS_qty}", String.valueOf(qty));
             System.out.println("First bid: px = " + px + ", qty = " + qty);
         } else {
             System.out.println("No bids found.");
