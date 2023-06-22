@@ -11,8 +11,5 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
-app:
-  topic:
-    RTDIS1: topic_one
-    qty: DS_qty
-    px: DS_px
+qty: DS_qty
+px: DS_px
